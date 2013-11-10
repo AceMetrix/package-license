@@ -1,0 +1,23 @@
+{
+  "name": "package-license",
+  "version": "0.1.1",
+  "description": "Checks the filesystem for potential license files and attempts to detect what they are",
+  "main": "index.js",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AceMetrix/package-license.git"
+  },
+  "keywords": [
+    "license",
+    "npm",
+    "bower",
+    "detect"
+  ],
+  "author": "Duncan Wong <baduncaduncan@gmail.com>",
+  "license": "Apache2",
+  "bugs": {
+    "url": "https://github.com/AceMetrix/package-license/issues"
+  }
+}
