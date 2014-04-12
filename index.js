@@ -16,10 +16,15 @@ var licenseFromString = function(str){
 }
 
 module.exports = function(packagePath){
+    var files = fs.readdirSync(packagePath);
     for (var i = 0; i < potentialFilenames.length; i++){
-        var file = potentialFilenames[i];
-        if (fs.existsSync(path.resolve(packagePath, file)))
-            return licenseFromString(fs.readFileSync(path.resolve(packagePath, file), 'utf8'));
+        for (var j = 0; j < files.length; ++j) {
+            // Do a case-insensitive match to find files named
+            // Readme.md or other variations
+            if (potentialFilenames[i].toLowerCase() === files[j].toLowerCase()) {
+                return licenseFromString(fs.readFileSync(path.resolve(packagePath, files[j]), 'utf8'));
+            }
+        }
     }
     return null;
 }
