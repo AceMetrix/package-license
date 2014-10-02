@@ -9,7 +9,19 @@ var licenseFromString = function(str){
     } else if (str.indexOf('BSD') > -1) {
         return 'BSD*';
     } else if (str.indexOf('Apache License') > -1) {
-        return 'Apache*';
+        return 'Apache*';    
+    } else if (str.indexOf('Mozilla') > -1) {
+        return 'Mozilla*';
+    } else if (str.indexOf('LGPL') > -1) {
+        return 'LGPL*';
+    } else if (str.indexOf('Affero') > -1) {
+        return 'GPL*';
+    } else if (str.indexOf('GPL') > -1) {
+        return 'GPL*';
+    } else if (str.indexOf('Eclipse') > -1) {
+        return 'Eclipse*';
+    } else if (str.indexOf('Artistic') > -1) {
+        return 'Artistic*';
     } else if (str.indexOf('DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE') > -1) {
         return 'WTF*';
     }  
