@@ -1,6 +1,6 @@
 {
   "name": "package-license",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Checks the filesystem for potential license files and attempts to detect what they are",
   "main": "index.js",
   "scripts": {
@@ -16,6 +16,10 @@
     "detect"
   ],
   "author": "Duncan Wong <baduncaduncan@gmail.com>",
+  "contributors": [{
+    "name": "Alexander Wunschik",
+    "email": "dev@wunschik.net"
+  }],
   "license": "Apache2",
   "bugs": {
     "url": "https://github.com/AceMetrix/package-license/issues"

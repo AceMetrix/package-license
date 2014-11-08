@@ -34,7 +34,8 @@ module.exports = function(packagePath){
             // Do a case-insensitive match to find files named
             // Readme.md or other variations
             if (potentialFilenames[i].toLowerCase() === files[j].toLowerCase()) {
-                return licenseFromString(fs.readFileSync(path.resolve(packagePath, files[j]), 'utf8'));
+                var license = licenseFromString(fs.readFileSync(path.resolve(packagePath, files[j]), 'utf8'));
+                if (license) return license;
             }
         }
     }
