@@ -1,5 +1,6 @@
 var fs = require('fs');
 var path = require('path');
+var _ = require('underscore');
 
 var potentialFilenames = ['LICENSE', 'license.txt', 'README', 'README.md', 'README.markdown'];
 
@@ -28,7 +29,10 @@ module.exports = function(packagePath){
                 var licenses = licenseFromString(fs.readFileSync(path.resolve(packagePath, files[j]), 'utf8'));
                 
                 // if only one license is found remove array
-                if (licenses && licenses.length === 1) licenses = licenses[0];
+                if (_.isArray(licenses) && licenses.length === 1) licenses = licenses[0];
+                
+                // remove duplicates
+                if (_.isArray(licenses) && licenses.length > 1) licenses = _.uniq(licenses);
                 
                 return licenses;
             }

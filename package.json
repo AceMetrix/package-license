@@ -23,5 +23,8 @@
   "license": "Apache2",
   "bugs": {
     "url": "https://github.com/AceMetrix/package-license/issues"
+  },
+  "dependencies": {
+    "underscore": "~1.5.2"
   }
 }
