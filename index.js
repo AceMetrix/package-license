@@ -10,7 +10,7 @@ var licenseFromString = function(content){
     if (content.indexOf('Apache License') > -1) licenses.push('Apache*');
     if (content.indexOf('Mozilla') > -1) licenses.push('Mozilla*');
     if (content.indexOf('LGPL') > -1) licenses.push('LGPL*');
-    if (content.indexOf('Affero') > -1) licenses.push('GPL*');
+    if (content.indexOf('Affero') > -1) licenses.push('AGPL*');
     if (content.indexOf('GPL') > -1) licenses.push('GPL*');
     if (content.indexOf('Eclipse') > -1) licenses.push('Eclipse*');
     if (content.indexOf('Artistic') > -1) licenses.push('Artistic*');
