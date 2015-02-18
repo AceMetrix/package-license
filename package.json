@@ -1,6 +1,6 @@
 {
   "name": "package-license",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Checks the filesystem for potential license files and attempts to detect what they are",
   "main": "index.js",
   "scripts": {
