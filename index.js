@@ -1,7 +1,7 @@
 var fs = require('fs');
 var path = require('path');
 
-var potentialFilenames = ['LICENSE', 'README', 'README.md', 'README.markdown','license.txt'];
+var potentialFilenames = ['LICENSE', 'LICENSE.md', 'README', 'README.md', 'README.markdown', 'license.txt'];
 
 var licenseFromString = function(str){
     if (str.indexOf('MIT') > -1) {
@@ -9,7 +9,7 @@ var licenseFromString = function(str){
     } else if (str.indexOf('BSD') > -1) {
         return 'BSD*';
     } else if (str.indexOf('Apache License') > -1) {
-        return 'Apache*';    
+        return 'Apache*';
     } else if (str.indexOf('Mozilla') > -1) {
         return 'Mozilla*';
     } else if (str.indexOf('LGPL') > -1) {
@@ -24,7 +24,7 @@ var licenseFromString = function(str){
         return 'Artistic*';
     } else if (str.indexOf('DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE') > -1) {
         return 'WTF*';
-    }  
+    }
 }
 
 module.exports = function(packagePath){
