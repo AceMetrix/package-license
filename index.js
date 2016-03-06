@@ -1,5 +1,6 @@
 var fs = require('fs');
 var path = require('path');
+var _ = require('underscore');
 
 var potentialFilenames = ['LICENSE', 'LICENSE.md', 'README', 'README.md', 'README.markdown', 'license.txt'];
 
